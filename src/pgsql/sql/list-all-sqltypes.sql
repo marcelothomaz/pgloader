@@ -5,7 +5,7 @@
          extname,
          typname,
          case when enum.enumtypid is not null
-              then array_agg(enum.enumlabel order by enumsortorder)
+              then array_agg(distinct enum.enumlabel)
           end as enumvalues
 
     from pg_class c
