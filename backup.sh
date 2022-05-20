@@ -16,9 +16,6 @@ SAMPLE_CFG="
 load database \n
   from $POSTGRES_URI_SOURCE \n
   into $POSTGRES_URI_TARGET \n
-  with \n
-    schema only, data only \n
-
   including only table names matching ~/./ in schema '$SCHEMA_NAME' \n
   ; \n
 "
